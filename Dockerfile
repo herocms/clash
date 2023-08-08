@@ -9,7 +9,7 @@ RUN go mod download && \
     make docker && \
     mv ./bin/clash-docker /clash
 
-FROM alpine:latest
+FROM alpine:3.18.3
 LABEL org.opencontainers.image.source="https://github.com/Dreamacro/clash"
 
 RUN apk add --no-cache ca-certificates tzdata
